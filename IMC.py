@@ -44,8 +44,8 @@ Classificação: {classificacao}
         continuar = input('Deseja calcular o IMC de outra pessoa? (sim/nao): ').strip().lower()
         if continuar != 'sim':
             break
+
     
-        
     print("\nResumo dos resultados:")
     for pessoa in pessoas:
         print(f"Nome: {pessoa['name']} - IMC: {pessoa['imc']:.2f} - Classificação: {pessoa['classificacao']}")    
