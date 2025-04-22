@@ -1,57 +1,62 @@
-# Cálculo de IMC
+🧮 Calculadora de IMC em Python
+Este é um projeto simples em Python para calcular o Índice de Massa Corporal (IMC) de uma ou mais pessoas, fornecendo também uma classificação com base no valor calculado.
 
-Este programa calcula o Índice de Massa Corporal (IMC) do usuário com base no peso e altura fornecidos.
+📌 O que é o IMC?
+O IMC (Índice de Massa Corporal) é uma medida internacional usada para indicar se uma pessoa está com o peso ideal, abaixo ou acima do recomendado para sua altura.
 
-## Como usar
+A fórmula usada é:
 
-1. Execute o script em Python.
-2. Insira seu nome completo.
-3. Digite seu peso (em kg).
-4. Digite sua altura (em metros).
-5. O programa calculará e exibirá seu IMC junto com uma classificação.
+ini
+Copiar
+Editar
+IMC = peso / (altura ** 2)
+🛠️ Funcionalidades
+Entrada de nome, peso e altura do usuário.
 
-## Código
+Cálculo automático do IMC.
 
-```python
-# Solicita os dados do usuário
-nome = input('Digite seu nome completo: ')
-peso = float(input('Digite seu peso (kg): '))  # Melhor usar float para pesos decimais
-altura = float(input('Digite sua altura (m): '))
+Classificação com base na tabela da OMS:
 
-# Calcula o IMC
-imc = peso / (altura ** 2)
+Abaixo do peso
 
-# Exibe os resultados
-print(f"""
-Olá, {nome}! Tudo bem?
-Seu peso é: {peso} kg
-Sua altura é: {altura} m
-Seu IMC é: {imc:.2f}""")  # Formata o IMC com duas casas decimais
+Peso normal
 
-# Classificação do IMC
-if imc < 18.5:
-    print('"Você está abaixo do peso normal."')
-elif 18.5 <= imc <= 24.9:  # Correção da condição
-    print('"Você está com o IMC ideal para um adulto."')
-else:
-    print('"Você está acima do peso."')
-```
+Sobrepeso
 
-## Classificação do IMC
+Obesidade Grau 1
 
-| IMC       | Classificação                |
-|-----------|------------------------------|
-| Menor que 18.5 | Abaixo do peso normal   |
-| 18.5 - 24.9 | Peso ideal                 |
-| Maior que 24.9 | Acima do peso           |
+Obesidade Grau 2
 
-## Requisitos
+Obesidade Grau 3 (obesidade mórbida)
 
-- Python 3.x instalado
+Permite calcular o IMC de múltiplas pessoas.
 
-## Executando o programa
+Exibe um resumo dos IMCs ao final.
 
-Salve o código como `imc.py` e execute no terminal ou prompt de comando com:
+▶️ Como usar
+Execute o programa com Python 3:
 
-```bash
-python imc.py
+python nome_do_arquivo.py
+Siga as instruções no terminal:
+
+Digite seu nome completo.
+
+Digite seu peso (em Kg).
+
+Digite sua altura (em metros).
+
+Você pode repetir o processo para quantas pessoas quiser.
+
+📦 Exemplo de saída
+Digite seu nome completo: Ana Silva
+Digite seu peso (Kg): 68
+Digite sua altura (m): 1.65
+
+Olá Ana Silva, tudo bem ?
+Seu peso é: 68.0 Kg
+Sua altura é: 1.65m
+Seu IMC é: 25.0
+Classificação: Sobrepeso
+
+✅ Requisitos
+Python 3.6 ou superior
